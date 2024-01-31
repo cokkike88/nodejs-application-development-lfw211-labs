@@ -1,5 +1,11 @@
 'use strict'
 
+const prefixer = function(greeding) {
+    return function (name) {
+        return greeding + name
+    }
+}
+
 const sayHiTo = prefixer('Hello ')
 const sayByeTo = prefixer('Goodbye ')
 console.log(sayHiTo('Dave')) // prints 'Hello Dave'
