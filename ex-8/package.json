@@ -1,0 +1,14 @@
+{
+  "name": "ex-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cancellingAsync.js",
+  "type": "module",
+  "scripts": {
+    "start": "node cancellingAsync.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

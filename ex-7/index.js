@@ -1,17 +1,15 @@
-import { realpath } from 'fs/promises'
-import { fileURLToPath } from 'url'
-import * as format from './format.js'
+'use strict'
+const pino = require('pino')
+const format = require('./format')
 
-
-const isMain = process.argv[1] && await realpath(fileURLToPath(import.meta.url)) === await realpath(process.argv[1])
-
-if (isMain){
-    const { default: pino } = await import('pino')
+if (require.main === module) {
+    const pino = require('pino')
     const logger = pino()
-    logger.info(format.upper('mu-package started'))
+    logger.info(format.upper('my-package started'))
     process.stdin.resume()
-}
-
-export default str => {
-    return format.upper(str).split('').reverse().join('')
+} else {
+    const reverseAndUpper = (str) => {
+        return format.upper(str).split('').reverse().join('')
+    }
+    module.exports = reverseAndUpper
 }

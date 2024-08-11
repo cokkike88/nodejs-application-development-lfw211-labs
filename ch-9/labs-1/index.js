@@ -4,6 +4,8 @@ const { EventEmitter } = require('events')
 
 const ee = new EventEmitter()
 let count = 0
+ee.once('tick', listener)
+
 setInterval(() => {
   ee.emit('tick')
 }, 100)

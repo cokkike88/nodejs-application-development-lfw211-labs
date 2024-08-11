@@ -1,0 +1,14 @@
+{
+  "name": "ex-9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promise-base-single-listener.js",
+  "type": "module",
+  "scripts": {
+    "start": "node promise-base-single-listener.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
